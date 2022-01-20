@@ -1,4 +1,4 @@
-# Deploy of a ready Kubernetes single-node cluster with libkrun
+# Deploy a Kubernetes single-node cluster with libkrun
 This repository contains the self contained environment to deploy a single-node k8s cluster with libkrun configured.
 
 The base image and setup is currently based on fedora 35.
