@@ -1,7 +1,7 @@
 NODE_NAME=k8s-fedora-35
 BUILDER=libkrun-dev-env
 BUILD_LIBKRUN=libkrun-build
-
+CRITEST=critest
 images: build-libkrun-builder build-libkrun build-image-k8s-node
 
 build-libkrun-builder:
@@ -13,3 +13,5 @@ build-libkrun: build-libkrun-builder
 build-image-k8s-node:
 	sudo podman build  -t ${NODE_NAME} k8s-node-preparation
 
+build-critest:
+	 sudo podman build  -t ${CRITEST} critest
