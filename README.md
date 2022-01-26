@@ -45,6 +45,15 @@ exit
 NAME          READY   STATUS      RESTARTS   AGE
 libkrun-pod   0/1     Completed   0          71s
 ```
-
+## Run critest
+In order to inject the annotation `run.oci.handler="krun"`, we are currently using a custom critest. 
+Build the critest image:
+```bash
+$ make build-critest
+```
+Run the tests:
+```bash
+$ critest/start-critest.sh
+```
 ### Disclaimers
 This is a first setup and there is a lot of space for improvment. The containers images and the kubernetes node container are deployed using root podman. Therefore, there are `sudo podman` hardcoded commands
