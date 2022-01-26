@@ -45,6 +45,8 @@ exit
 NAME          READY   STATUS      RESTARTS   AGE
 libkrun-pod   0/1     Completed   0          71s
 ```
+The container images pulled by kubernetes running the container are cache in the volume `k8s-node-images` in order to speed-up the next run. If you want to clean up, you could simply remove the volume `sudo podman volume rm k8s-node-images`.
+
 ## Run critest
 In order to inject the annotation `run.oci.handler="krun"`, we are currently using a custom critest. 
 Build the critest image:
